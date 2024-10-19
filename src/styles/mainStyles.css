@@ -1,0 +1,28 @@
+.container {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .task-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  
+  .task-item.low {
+    background-color: lightgreen;
+  }
+  
+  .task-item.medium {
+    background-color: lightyellow;
+  }
+  
+  .task-item.high {
+    background-color: lightcoral;
+  }
+  
+  .task-item.completed {
+    text-decoration: line-through;
+  }
+  

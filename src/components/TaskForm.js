@@ -21,7 +21,7 @@ const TaskForm = ({ addTask }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className='flex flex-col w-2/5 m-auto'>
+    <form onSubmit={handleSubmit} className='flex flex-col w-full max-w-lg m-auto'>
       <input
         className='border  border-gray-600 p-1 rounded-sm my-2'
         type="text"
@@ -30,10 +30,11 @@ const TaskForm = ({ addTask }) => {
         onChange={(e) => setTaskTitle(e.target.value)}
       />
       <textarea
-        className='border border-gray-600 p-1 rounded-sm my-2'
+        className='border border-gray-600 p-1 rounded-sm my-2 w-full max-w-full'
         placeholder="Description"
         value={taskDescription}
         onChange={(e) => setTaskDescription(e.target.value)}
+        rows="4" // To give it some initial height
       ></textarea>
       <select value={taskPriority} onChange={(e) => setTaskPriority(e.target.value)} 
         className='border  border-gray-600 p-1 rounded-sm my-2'
@@ -45,6 +46,7 @@ const TaskForm = ({ addTask }) => {
       <button className='bg-green-400 p-1 rounded-sm' type="submit">Add Task</button>
     </form>
   );
+
 };
 
 export default TaskForm;
